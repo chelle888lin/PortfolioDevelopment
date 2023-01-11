@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Michelle Lin - About Me</title>
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="3x3boxes.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+        <style>
+            /* Style The Dropdown Button */
+            .dropbtn {
+              background-color: #4CAF50;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;
+              cursor: pointer;
+            }
+            
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
+            
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+            
+            /* Links inside the dropdown */
+            .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+            }
+            
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {background-color: #f1f1f1}
+            
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
+            
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {
+              background-color: #3e8e41;
+            }
+            </style>
+
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <header>
+               <nav>
+                  <div class="menu-icon">
+                     <i class="fa fa-bars fa-2x"></i>
+                  </div>
+                  <div class="logo">
+                    MICHELLE LIN
+                 </div>
+                 <div class="menu">
+                    <ul>
+                       <li><a href="aboutme.html">About Me</a></li>
+                       <div class="dropdown">
+                           <button class="dropbtn">Portfolio</button>
+                           <div class="dropdown-content">
+                             <a href="personalwork.html">Personal Work</a>
+                             <a href="previousworks.html">Previous Works</a>
+                             <a href="schoolinvolvement.html">School Involvement</a>
+                             <a href="externalinvolvement.html">External Involvement</a>
+                           </div>
+                         </div>
+                       <li><a href="contactme.html">Contact Me</a></li>
+                    </ul>
+                 </div>
+               </nav>
+            </header>
+            <script>
+                $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+            </script>
+
+         <div class="content">
+        <div class="grid">
+  <div class="square">
+    <ul>This demo shows you can center multiple types of content :
+      <li>Text</li>
+      <li>Images</li>
+      <li>Lists</li>
+      <li>... (you can also do it with forms)</li>
+    </ul>
+  </div>
+  <div class="square">98%</div>
+  <div class="square">3.9/5</div>
+  <div class="square"><img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" /></div>
+  <div class="square"><img src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg" /></div>
+  <div class="square"><img class="rs" src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg" /></div>
+  <div class="square fullImg"><img src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg" /></div>
+  <div class="square fullImg"><img class="rs" src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg" /></div>
+  <div class="square fullImg"><img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" /></div>
+</div>
+</div>
+    </body>
+</html>
