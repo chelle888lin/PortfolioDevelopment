@@ -3,7 +3,7 @@ body {
   }
             
   nav {
-    background-color: #f1f1f1;
+    background-color: #fffcfc;
     height: 50px;
     padding: 10px;
   }
@@ -41,7 +41,7 @@ body {
     top: 100%; /* Position the dropdown menu below the main menu item */
     left: 0;
     z-index: 1; /* Set a higher z-index to ensure the dropdown menu is displayed on top */
-    background-color: #f1f1f1;
+    background-color: #fffdfd;
     min-width: 100%; /* Set a minimum width for the dropdown menu */
   }
   
@@ -58,7 +58,7 @@ body {
   
   a:hover {
     color: #ff6600;
-    transform: rotate(20deg);
+    transform: translate(120px, 50%);
   }
   
   
