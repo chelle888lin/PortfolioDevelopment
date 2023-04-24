@@ -31,6 +31,16 @@ body {
   li:hover > ul {
     display: block; 
   }
+
+  ul ul {
+    display: none; /* Hide the dropdown menu by default */
+    position: absolute; /* Position the dropdown menu absolutely */
+    top: 100%; /* Position the dropdown menu below the main menu item */
+    left: 0;
+    z-index: 1; /* Set a higher z-index to ensure the dropdown menu is displayed on top */
+    background-color: #f1f1f1;
+    min-width: 100%; /* Set a minimum width for the dropdown menu */
+  }
   
   a {
     color: #333;
