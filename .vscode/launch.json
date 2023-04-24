@@ -9,15 +9,7 @@
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:8080",
-            "port": 9229,
-            "webRoot": "${workspaceFolder}/src",
-            "runtimeArgs": [
-                "debug:start"
-            ],
-            "resolveSourceMapLocations": [
-                "${webRoot}/**",
-                "!**/node_modules/**"
-            ]
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
