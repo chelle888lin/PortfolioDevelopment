@@ -58,7 +58,7 @@ body {
   
   a:hover {
     color: #ff6600;
-    transform: translate(120px, 50%);
+    transform: scale(2);
   }
   
   
