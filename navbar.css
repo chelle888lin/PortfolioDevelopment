@@ -4,6 +4,7 @@ body {
             
   nav {
     background-color: #f1f1f1;
+    height: 50px;
     padding: 10px;
   }
   
@@ -13,10 +14,22 @@ body {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    height: 100%;
   }
   
   li {
     margin: 0 10px;
+    height: 100%;
+  }
+
+  li.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  li:hover > ul {
+    display: block; 
   }
   
   a {
@@ -25,10 +38,14 @@ body {
     font-size: 20px;
     font-weight: bold;
     transition: all 0.2s ease-in-out;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
   
   a:hover {
     color: #ff6600;
     transform: rotate(20deg);
   }
+  
   
