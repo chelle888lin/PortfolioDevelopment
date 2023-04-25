@@ -6,127 +6,91 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Michelle Lin - About Me</title>
         <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="3x3boxes.css">
+        <link rel="stylesheet" href="about.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/css-doodle@0.17.2/css-doodle.min.js">
 
-        <style>
-            /* Style The Dropdown Button */
-            .dropbtn {
-              background-color: #4CAF50;
-              color: white;
-              padding: 16px;
-              font-size: 16px;
-              border: none;
-              cursor: pointer;
-            }
-            
-            /* The container <div> - needed to position the dropdown content */
-            .dropdown {
-              position: relative;
-              display: inline-block;
-            }
-            
-            /* Dropdown Content (Hidden by Default) */
-            .dropdown-content {
-              display: none;
-              position: absolute;
-              background-color: #f9f9f9;
-              min-width: 160px;
-              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-              z-index: 1;
-            }
-            
-            /* Links inside the dropdown */
-            .dropdown-content a {
-              color: black;
-              padding: 12px 16px;
-              text-decoration: none;
-              display: block;
-            }
-            
-            /* Change color of dropdown links on hover */
-            .dropdown-content a:hover {background-color: #f1f1f1}
-            
-            /* Show the dropdown menu on hover */
-            .dropdown:hover .dropdown-content {
-              display: block;
-            }
-            
-            /* Change the background color of the dropdown button when the dropdown content is shown */
-            .dropdown:hover .dropbtn {
-              background-color: #3e8e41;
-            }
-            </style>
+<style>
+  section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #091833;
+    overflow: hidden;
+  }
+</style>
 
     </head>
     <body>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+      <script>
 
-        <div class="wrapper">
-            <header>
-               <nav>
-                  <div class="menu-icon">
-                     <i class="fa fa-bars fa-2x"></i>
-                  </div>
-                  <div class="logo">
-                    MICHELLE LIN
-                 </div>
-                 <div class="menu">
-                    <ul>
-                       <li><a href="aboutme.html">About Me</a></li>
-                       <div class="dropdown">
-                           <button class="dropbtn">Portfolio</button>
-                           <div class="dropdown-content">
-                             <a href="personalwork.html">Personal Work</a>
-                             <a href="previousworks.html">Previous Works</a>
-                             <a href="schoolinvolvement.html">School Involvement</a>
-                             <a href="externalinvolvement.html">External Involvement</a>
-                           </div>
-                         </div>
-                       <li><a href="contactme.html">Contact Me</a></li>
-                    </ul>
-                 </div>
-               </nav>
-            </header>
-            <script>
-                $(document).ready(function() {
-            $(".menu-icon").on("click", function() {
-                  $("nav ul").toggleClass("showing");
-            });
-      });
+      const colors = [
+  '#711c91',
+  '#ea00d9',
+  '#0abdc6',
+  '#133e7c'
+];
 
-      // Scrolling Effect
+createSquare = () => {
+  const section = document.querySelector('section');
+  const square = document.createElement('span');
+  
+  const size = Math.random() * 50;
+  
+  square.style.width = 20 + size + 'px';
+  square.style.height = 20 + size + 'px';
+  
+  square.style.top = Math.random() * innerHeight + 'px';
+  square.style.left = Math.random() * innerWidth + 'px';
+  
+  square.style.background = colors[Math.floor(Math.random() * colors.length)];
+  section.appendChild(square);
+  
+  setTimeout(() => {
+    square.remove()
+  }, 5000);
+}
 
-      $(window).on("scroll", function() {
-            if($(window).scrollTop()) {
-                  $('nav').addClass('black');
-            }
+setInterval(createSquare, 150);
 
-            else {
-                  $('nav').removeClass('black');
-            }
-      })
-            </script>
+</script>
+<br>
+      <nav>
+        <ul>
+          <li><a href="home.html">Michelle Lin</a></li>
+      
+          <li class="logo"><a href="PD Logo.png"><img src="PD Logo.png" alt="Logo" height="60px"></a></li>
+      
+          <li><a href="aboutme.html">About</a></li>
+          <li>
+            <a href="portfolio.html">Portfolio</a>
+            <ul>
+              <li><a href="externalinvolvement.html">External Involvement</a></li>
+              <li><a href="personalwork.html">Personal Work</a></li>
+              <li><a href="previousworks.html">Previous Works</a></li>
+              <li><a href="schoolinvolvement.html">School Involvement</a></li>
+            </ul>
+          </li>
+          <li><a href="contactme.html">Contact Me</a></li>
+        </ul>
+      </nav>
+      <section></section>
 
-         <div class="content">
-        <div class="grid">
-  <div class="square">
-    <ul>This demo shows you can center multiple types of content :
-      <li>Text</li>
-      <li>Images</li>
-      <li>Lists</li>
-      <li>... (you can also do it with forms)</li>
-    </ul>
-  </div>
-  <div class="square">98%</div>
-  <div class="square">3.9/5</div>
-  <div class="square"><img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" /></div>
-  <div class="square"><img src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg" /></div>
-  <div class="square"><img class="rs" src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg" /></div>
-  <div class="square fullImg"><img src="https://farm9.staticflickr.com/8461/8048823381_0fbc2d8efb.jpg" /></div>
-  <div class="square fullImg"><img class="rs" src="https://farm5.staticflickr.com/4144/5053682635_b348b24698.jpg" /></div>
-  <div class="square fullImg"><img src="https://farm3.staticflickr.com/2878/10944255073_973d2cd25c.jpg" /></div>
-</div>
-</div>
+      <!-- Create a container to hold the boxes -->
+    <div class="container">
+      <!-- Create 9 boxes using the 'box' class -->
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+      <div class="box">Box 6</div>
+      <div class="box">Box 7</div>
+      <div class="box">Box 8</div>
+      <div class="box">Box 9</div>
+    </div>
+
     </body>
 </html>
